@@ -1,0 +1,26 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.7 Collection
+/*----------------------------------------*/
+
+.aq-text-white{
+	color: var(--aq-common-white);
+}
+.aq-text-black{
+	color: var(--aq-common-black);
+}
+.aq-text-off-white{
+	color: var(--aq-common-off-white);
+}
+.aq-line-anim {
+    display: inline;
+    transition: all 0.3s linear;
+    background-repeat: no-repeat;
+    background-size: 0% 1px, 0 1px;
+    background-position: 100% 100%, 0 100%;
+    background-image: linear-gradient(currentcolor, currentcolor), linear-gradient(currentcolor, currentcolor);
+    &:hover {
+        background-size: 0% 1px, 100% 1px;
+    }
+}

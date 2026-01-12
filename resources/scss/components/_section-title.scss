@@ -1,0 +1,160 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.8 Section Title
+/*----------------------------------------*/
+
+.aq-section{
+    &-subtitle{
+        font-size: 16px;
+        line-height: 1;
+        display: inline-block;
+        color: var(--aq-common-black);
+        font-family: var(--aq-ff-satoshi-medium);
+        @media #{$xl,$lg,$md,$xs}{
+            font-size: 12px;
+        }
+        &.ff-satoshi{
+            font-family: var(--aq-ff-satoshi-regular);
+        }
+        &.ff-satoshi-bold{
+            font-family: var(--aq-ff-satoshi-bold);
+        }
+        &.ff-onest-med{
+            font-weight: 500;
+            font-family: var(--aq-ff-onest);
+        }
+        &-fs{
+            &-20{
+                font-size: 20px;
+                line-height: 1;
+            }
+        }
+    }
+    &-title{
+        font-size: 100px;
+        line-height: 1.06;
+        display: block;
+        color: var(--aq-common-black);
+        font-family: var(--aq-ff-satoshi-regular);
+        @media #{$xl}{
+            font-size: 80px;
+        }
+        @media #{$lg}{
+            font-size: 70px;
+        }
+        @media #{$md}{
+            font-size: 50px;
+        }
+        @media #{$xs}{
+            font-size: 40px;
+        }
+        &.ff-satoshi-reg{
+            font-family: var(--aq-ff-satoshi-regular);
+        }
+        &.ff-satoshi-med{
+            font-family: var(--aq-ff-satoshi-medium);
+        }
+        &.ff-satoshi-bold{
+            font-family: var(--aq-ff-satoshi-bold);
+        }
+        &.ff-onest-bold{
+            font-weight: 700;
+            font-family: var(--aq-ff-onest);
+        }
+        &.ff-onest-med{
+            font-weight: 500;
+            font-family: var(--aq-ff-onest);
+        }
+        &.ff-libre{
+            font-family: var(--aq-ff-libre);
+        }
+        &.fs{
+            &-26{
+                font-size: 26px;
+                letter-spacing: -0.36px;
+            }
+            &-30{
+                font-size: 30px;
+                letter-spacing: -0.3px;
+            }
+            &-32{
+                font-size: 32px;
+                letter-spacing: -0.32px;
+            }
+            &-36{
+                font-size: 36px;
+                letter-spacing: -0.36px;
+                @media #{$xl,$lg,$md,$xs}{
+                    font-size: 30px;
+                }
+            }
+            &-38{
+                font-size: 38px;
+                letter-spacing: -0.76px;
+                @media #{$xl,$lg,$md,$xs}{
+                    font-size: 30px;
+                }
+            }
+            &-40{
+                font-size: 40px;
+                letter-spacing: -0.8px;
+            }
+            &-44{
+                font-size: 44px;
+                letter-spacing: -2.2px;
+                @media #{$xs}{
+                    font-size: 35px;
+                }
+                & span{
+                    font-family: var(--aq-ff-satoshi-bold);
+                }
+            }
+            &-50{
+                font-size: 50px;
+                line-height: 1;
+                letter-spacing: -2px;
+                & span{
+                    font-family: var(--aq-ff-satoshi-light);
+                }
+            }
+            &-56{
+                font-size: 56px;
+            }
+            &-60{
+                font-size: 60px;
+                line-height: 1;
+                letter-spacing: -2.4px;
+                text-transform: uppercase;
+            }
+            &-70{
+                font-size: 70px;
+                line-height: 1;
+                letter-spacing: -2.8px;
+                @media #{$xl}{
+                    font-size: 60px;
+                }
+                @media #{$lg}{
+                    font-size: 50px;
+                }
+                @media #{$md,$xs}{
+                    font-size: 45px;
+                }
+            }
+            &-84{
+                font-size: 84px;
+                line-height: 1;
+                letter-spacing: -3.36px;
+            }
+        }
+    }
+    &-paragraph{
+        & p{
+            font-size: 16px;
+            color: #414243;
+            line-height: 14px;
+            letter-spacing: 0.16px;
+            font-family: var(--aq-ff-satoshi-medium);
+        }
+    }
+}

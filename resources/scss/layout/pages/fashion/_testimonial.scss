@@ -1,0 +1,113 @@
+@use '../../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 fashion testimonial css
+/*----------------------------------------*/
+
+.aqf-testimonial{
+    &-text{
+        margin-bottom: 38px;
+        & p{
+            font-size: 30px;
+            margin-bottom: 0;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+            color: var(--aq-common-black);
+            font-family: var(--aq-ff-satoshi-medium);
+            @media #{$xl,$lg}{
+                font-size: 25px;
+            }
+            @media #{$md}{
+                font-size: 22px;
+            }
+            @media #{$xs}{
+                font-size: 22px;
+                & br{
+                    display: none;
+                }
+            }
+        }
+    }
+    &-info{
+        & span{
+            font-size: 16px;
+            line-height: 1;
+            color: var(--aq-common-black);
+            font-family: var(--aq-ff-satoshi-medium);
+        }
+    }
+    &-quote{
+        margin-bottom: 30px;
+        display: inline-block;
+    }
+    &-ratting{
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+    &-arrow{
+        @media #{$xs}{
+            display: none;
+        }
+        & button{
+            position: absolute;
+            top: 50%;
+            left: -20%;
+            transform: translateY(-50%);
+            height: 46px;
+            width: 46px;
+            line-height: 1;
+            text-align: center;
+            display:inline-block;
+            border-radius: 50%;
+            @include aq-transition();
+            color: var(--aq-common-black);
+            border: 1px solid rgba(0, 7, 9, 0.08);
+            @media #{$lg}{
+                left: -10%;
+            }
+            @media #{$md}{
+                left: -4%;
+            }
+            &.aqf-testimonial-next{
+                left: auto;
+                right: -20%;
+                @media #{$lg}{
+                    right: -10%;
+                }
+                @media #{$md}{
+                    right: -4%;
+                }
+            }
+            &:hover{
+                color: var(--aq-common-white);
+                border-color: var(--aq-common-coffee);
+                background-color: var(--aq-common-coffee);
+            }
+        }
+    }
+    &-dot{
+        & .swiper-pagination-bullet{
+            display: flex;
+            align-items: center;
+            height: 10px;
+            width: 10px;
+            opacity: 1;
+            border-radius: 50%;
+            display: inline-block;
+            @include aq-transition();
+            background-color: var(--aq-common-black);
+            border: 1px solid var(--aq-common-black);
+            &.swiper-pagination-bullet-active{
+                background-color: transparent;
+            }
+        }
+    }
+    &-area{
+        @media #{$xl}{
+            padding-bottom: 90px;
+        }
+        @media #{$lg,$md,$xs}{
+            padding-bottom: 80px;
+        }
+    }
+}

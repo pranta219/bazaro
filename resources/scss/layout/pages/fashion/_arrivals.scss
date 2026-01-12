@@ -1,0 +1,133 @@
+@use '../../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 fashion deals css
+/*----------------------------------------*/
+
+.aqf-arrivals{
+    &-wrap{
+        position: relative;
+        height: 100%;
+        padding: 50px 115px;
+        border: 1px solid var(--aq-gray-5);
+        @media #{$xl}{
+            padding: 35px 60px;
+        }
+        @media #{$lg}{
+            padding: 30px 30px;
+        }
+        @media #{$md}{
+            padding: 30px 60px;
+        }
+    }
+    &-btn{
+        & .aq-btn-white.btn-square-bg {
+            padding: 15px 70px;
+        }
+    }
+    &-title{
+        &-box{
+            @media #{$xl,$lg,$md,$xs}{
+                margin-bottom: 35px;
+            }
+        }
+    }
+    &-product{
+        &-active{
+            @media #{$xl}{
+                margin-bottom: 35px;
+            }
+            @media #{$lg,$md,$xs}{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &-nav{
+        height: 100%;
+        &-active{
+            height: 100%;
+        }
+        &-thumb{
+            height: 100%;
+            & img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &-area{
+        @media #{$lg}{
+            padding-top: 100px;
+        }
+        @media #{$md}{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+}
+
+.aqf-bundle{
+    &-select{
+        & .nice-select{
+            position: relative;
+            display: inline-flex;
+            padding: 7px 20px;
+            gap: 24px;
+            height: 40px;
+            justify-content: start;
+            align-items: center;
+            min-width: 195px;
+            border-radius: 30px;
+            background-color: transparent;
+            border: 1px solid rgba(1, 15, 28, 0.10);
+            & .list {
+                margin-top: 2px;
+                min-width: 165px;
+            }
+            &::after {
+                border-bottom: 1px solid var(--aq-common-black);
+                border-right: 1px solid var(--aq-common-black);
+                content: '';
+                display: block;
+                height: 8px;
+                margin-top: -4px;
+                pointer-events: none;
+                position: absolute;
+                right: 22px;
+                top: 49%;
+                -webkit-transform-origin: 66% 66%;
+                -ms-transform-origin: 66% 66%;
+                transform-origin: 66% 66%;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -webkit-transition: all 0.15s ease-in-out;
+                transition: all 0.15s ease-in-out;
+                width: 8px;
+            }
+            &.open::after {
+                -webkit-transform: rotate(-135deg);
+                -ms-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+            }
+        }
+    }
+    &-details{
+        &-wrap{
+            & .aq-cartmini-product-thumbnail {
+                width: 180px;
+                height: auto;
+                margin-right: 25px;
+            }
+            & .aq-cartmini-product-price {
+                margin-bottom: 20px;
+            }
+            & .aq-cartmini-product-item{
+                &:not(:last-child){
+                    border-bottom: 1px solid var(--aq-gray-5);
+                }
+            }
+        }
+    }
+}

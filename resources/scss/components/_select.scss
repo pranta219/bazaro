@@ -1,0 +1,47 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.9 select
+/*----------------------------------------*/
+
+.nice-select{
+    height: 54px;
+    line-height: 54px;
+    border-radius: 0;
+    border: 1px solid transparent;
+    color: var(--aq-common-black);
+    background-color: var(--aq-gray-5);
+    float: none;
+    padding: 0 26px;
+    & .option.selected {
+        font-weight: 500;
+    }
+    &::after{
+        right: 26px;
+    }
+    &.open{
+        background-color: transparent;
+        border-color: var(--aq-common-black);
+        & .list{
+            @include aq-transform(scale(1) translateY(0px));
+        }
+    }
+    & .list{
+        margin-top: 1px;
+        border-radius: 0;
+        transform-origin: center center;
+        background-color: var(--aq-gray-5);
+        @include aq-transform(scale(.9) translateY(0px));
+        width: 100%;
+        padding: 12px 0;
+        & .option{
+            line-height: 1.2;
+            min-height: inherit;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            &:hover{
+                color: var(--aq-common-red);
+            }
+        }
+    }
+}

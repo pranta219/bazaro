@@ -1,0 +1,60 @@
+@use '../../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 bags hero slider css
+/*----------------------------------------*/
+.aqb-gallery{
+    &-title{
+        &-box{
+            & p{
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px;
+                margin-bottom: 0;
+                color: rgba(1, 15, 28, 0.80);
+                font-family: var(--aq-ff-onest);
+            }
+        }
+    }
+    &-follower{
+        & a{
+            min-height: 85px;
+            padding: 20px 45px;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 24px;
+            align-items: center;
+            display: inline-flex;
+            justify-content: center;
+            border: 1px solid #ECECEA;
+            color: var(--aq-common-black);
+            font-family: var(--aq-ff-onest);
+            & span {
+                position: absolute;
+                top: 7px;
+                right: 10px;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                color: rgba(1, 15, 28, 0.80);
+                font-family: var(--aq-ff-onest);
+            }
+            & i{
+                margin-right: 12px;
+                & svg{
+                    transform: translateY(-1px);
+                }
+            }
+        }
+    }
+    &-item{
+        & img{
+            transition: .9s;
+        }
+        &:hover{
+            & img{
+                transform: scale(1.1);
+            }
+        }
+    }
+}

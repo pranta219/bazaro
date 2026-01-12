@@ -1,0 +1,45 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 feature css
+/*----------------------------------------*/
+
+.aq-brand{
+    &-wrap{
+        overflow: hidden;
+        border-radius: 20px;
+        border: 1px solid var(--aq-gray-5);
+    }
+    &-item{
+        position: relative;
+        height: 120px;
+        padding: 10px;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        @include aq-transition();
+        border-right: 1px solid var(--aq-gray-5);
+        & img{
+            opacity: .3;
+            @include aq-transition();
+        }
+        &:hover{
+            background-color: rgba($color: #010F1C, $alpha: 0.02);
+            & img{
+                opacity: 1;
+            }
+        }
+    }
+    &-active{
+        margin: 0 -1px;
+        & .swiper-slide-active{
+            & .aq-brand-item{
+                background-color: rgba($color: #010F1C, $alpha: 0.02);
+                & img{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

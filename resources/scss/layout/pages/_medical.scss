@@ -1,0 +1,539 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.4 medical css
+/*----------------------------------------*/
+
+
+.med-header{
+    &-top-style{
+        border-bottom: 1px solid rgba(1, 15, 28, 0.08);
+        & .aq-header{
+            &-info{
+                &-item{
+                    &:not(:last-of-type){
+                        &::after{
+                            background-color: rgba(1, 15, 28, 0.08);
+                        }
+                    }
+                    & a{
+                        color: var(--aq-common-black);
+                        & span{
+                            color: var(--aq-common-black);
+                        }
+                    }
+                }
+            }
+            &-discount{
+                &-item{
+                    & p{
+                        color: var(--aq-common-black);
+                    }
+                }
+            }
+        }
+        &.aq-header-top-style-2{
+            & .aq-header-top-menu-item {
+                & > span{
+                    color: var(--aq-common-black);
+                }
+                &:not(:last-child){
+                    &::after{
+                        background-color: rgba(1, 15, 28, 0.08);
+                    }
+                }
+            }
+        }
+    }
+    &-center-style{
+        border-bottom: 1px solid rgba(1, 15, 28, 0.08);
+        & .aqf-bundle-select {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            & .nice-select{
+                padding: 0;
+                border: none;
+                height: 25px;
+                min-width: 145px;
+                border-radius: 0;
+                border-right: 1px solid rgba(1, 15, 28, 0.10);
+                & .list{
+                    width: 100%;
+                    min-width: inherit;
+                }
+            }
+        }
+        & .grc-header-search{
+            &-wrap{
+                margin-left: -115px;
+            }
+            & input{
+                height: 54px;
+                padding-left: 206px;
+                border-radius: 12px;
+                background: #F8F8F8;
+                border: 1px solid #F8F8F8;
+                &:focus{
+                    border-color: rgba(16, 132, 126, 0.10);
+                }
+            }
+            &-icon{
+                left: 180px;
+            }
+            &-btn{
+                right: 6px;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 8px 25px;
+                border-radius: 8px;
+                letter-spacing: 0.16px;
+                color: var(--aq-common-white);
+                background: var(--aq-common-paste);
+                font-family: var(--aq-ff-satoshi-regular);
+            }
+        }
+        & .grc-header-right-option{
+            & > ul {
+                & > li{
+                    & .grc-option-style{
+                        background: #F8F8F8;
+                        color: var(--aq-common-black);
+                        & .count-box{
+                            top: -7px;
+                            right: -14px;
+                            border: none;
+                            color: var(--aq-common-white);
+                            background-color: var(--aq-common-paste);
+                        }
+                    }
+                    &:not(:last-child) {
+                        margin-right: 16px;
+                    }
+                }
+            }
+            & .aq-header-top-account{
+                &-content {
+                    & span{
+                        color: #86898C;
+                    }
+                    & p{
+                        color: var(--aq-common-black);
+                    }
+                }
+            }
+        }
+    }
+    &-bottom-style{
+        border-bottom: 1px solid rgba(1, 15, 28, 0.08);
+        & .aq-header{
+            &-menu{
+                margin-left: -100px;
+                & nav {
+                    & ul {
+                        & li {
+                            & a{
+                                padding: 20px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-menu{
+        &-cat{
+            position: relative;
+            max-width: 300px;
+            & button{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                padding: 12px 25px;
+                min-height: 54px;
+                font-size: 14px;
+                letter-spacing: 0.14px;
+                text-transform: uppercase;
+                color: var(--aq-common-white);
+                background: var(--aq-common-paste);
+                font-family: var(--aq-ff-satoshi-bold);
+                & span{
+                    @extend %svg-2;
+                    margin-right: 12px;
+                    display: inline-block;
+                }
+            }
+        }
+        &-off{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: 9;
+        }
+        &-list{
+            padding: 10px 15px;
+            border-radius: 0 0 12px 12px;
+            border: 1px solid rgba(1, 15, 28, 0.08);
+            background: rgba(255, 255, 255, 0.10);
+            box-shadow: 0 1px 3px 0 rgba(1, 15, 28, 0.10);
+            & li{
+                list-style: none;
+                &:not(:last-of-type){
+                    border-bottom: 1px solid rgba(1, 15, 28, 0.08);
+                }
+                & a{
+                    display: flex;
+                    gap: 15px;
+                    font-size: 15px;
+                    font-weight: 500;
+                    padding: 14px 10px;
+                    letter-spacing: 0.15px;
+                    color: var(--aq-common-black);
+                    font-family: var(--aq-ff-satoshi-medium);
+                    &:hover{
+                        background: #F8F8F8;
+                    }
+                    & span{
+                        @extend %svg-2;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    &-right-dis{
+        & span{
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-block;
+            text-transform: uppercase;
+            color: var(--aq-common-black);
+            font-family: var(--aq-ff-satoshi-medium);
+            & svg{
+                @extend %svg-2;
+                margin-right: 4px;
+            }
+        }
+    }
+}
+
+.med-hero{
+    &-style{
+        margin-left: -80px;
+        border-radius: 12px;
+    }
+    &-subtitle{
+        font-size: 15px;
+        font-weight: 600;
+        color: #DA3F3F;
+        margin-bottom: 8px;
+        animation-delay: 0.3s;
+        animation-duration: 1s;
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: var(--aq-ff-onest);
+    }
+    &-title{
+        font-size: 60px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        animation-delay: 0.5s;
+        animation-duration: 1s;
+        color: var(--aq-common-black);
+        font-family: var(--aq-ff-onest);
+    }
+    &-text{
+        margin-bottom: 35px;
+        animation-delay: 0.7s;
+        animation-duration: 1s;
+        & p{
+            font-size: 18px;
+            font-family: var(--aq-ff-onest);
+            & span{
+                font-weight: 600;
+                color: #DA3F3F;
+            }
+        }
+    }
+    &-price{
+        position: absolute;
+        right: 15%;
+        top: 45%;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: inline-grid;
+        place-content: center;
+        background-color: #DA3F3F;
+        & span{
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            display: inline-block;
+            letter-spacing: -0.16px;
+            color: var(--aq-common-white);
+            font-family: var(--aq-ff-onest);
+        }
+        & p{
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.3px;
+            color: var(--aq-common-white);
+            font-family: var(--aq-ff-onest);
+        }
+    }
+    &-thumb{
+        &-wrap{
+            animation-delay: 0.7s;
+            animation-duration: 1s;
+            &::before{
+                position: absolute;
+                bottom: -300px;
+                left: -15px;
+                right: 0;
+                height: 580px;
+                width: 580px;
+                content: "";
+                z-index: -1;
+                border-radius: 580px;
+                background: linear-gradient(189deg, #FFF -20.66%, rgba(255, 255, 255, 0) 51.85%);
+            }
+        }
+    }
+    &-btn{
+        animation-delay: 0.9s;
+        animation-duration: 1s;
+    }
+}
+
+.med-offer{
+    &-ptb{
+        padding-top: 20px;
+        margin-left: -80px;
+    }
+    &-item{
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        border: 1px solid #FCF4F1;
+        padding: 12px 32px 12px 20px;
+        justify-content: space-between;
+        background: linear-gradient(90deg, rgba(255, 217, 207, 0.04) 18.69%, #FFD9CF 100%);
+        &.bg{
+            &-2{
+                border: 1px solid #F1EEFF;
+                background: linear-gradient(90deg, rgba(226, 216, 254, 0.04) 18.69%, #E2D8FE 100%);
+                & .med-offer-item-btn{
+                    & span{
+                        color: #1F0070;
+                    }
+                }
+            }
+            &-3{
+                border: 1px solid #FFEDF4;
+                background: linear-gradient(90deg, rgba(255, 224, 237, 0.04) 18.69%, #FFE0ED 100%);
+            }
+        }
+        &:hover{
+            & .med-offer-item{
+                &-icon{
+                    & img{
+                        animation: shrink-anim 0.6s;
+                    }
+                }
+            }
+        }
+        &-left{
+            gap: 15px;
+            align-items: center;
+        }
+        &-icon{
+            & img{
+                width: 50px;
+                height: 54px;
+            }
+        }
+        &-content{
+            & h4{
+                font-size: 17px;
+                line-height: 1;
+                margin-bottom: 0px;
+                letter-spacing: 0.17px;
+                color: var(--aq-common-black);
+                font-family: var(--aq-ff-satoshi-medium);
+            }
+            & span{
+                font-size: 14px;
+                font-weight: 500;
+                color: #7E1B01;
+                display: inline-block;
+            }
+        }
+        &-btn{
+            & span{
+                color: #7E1B01;
+            }
+        }
+    }
+}
+
+.med-categories{
+    &-wrap{
+        & .aqf-categories{
+            &-item{
+                &:hover{
+                    & span{
+                        color: var(--aq-common-paste);
+                    }
+                }
+            }
+            &-img{
+                margin-bottom: 14px;
+                & img{
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    &-btn{
+        & .aqf-categories-arrow{
+            gap: 0px;
+            display: flex;
+            & button{
+                opacity: 1;
+                box-shadow: none;
+                position: static;
+                visibility: visible;
+                background: transparent;
+                &:hover{
+                    color: var(--aq-common-black);
+                }
+            }
+        }
+    }
+}
+
+.med-deals{
+    &-slider{
+        &-style{
+            &.grc-product-style{
+                & .aq-product{
+                    &-title{
+                        margin-bottom: 8px;
+                        & a{
+                            &:hover{
+                                color: var(--aq-common-paste);
+                            }
+                        }
+                    }
+                    &-price{
+                        & del{
+                            color: #55585B;
+                        }
+                    }
+                }
+                & .product-btn-green{
+                    color: var(--aq-common-paste);
+                    background-color: rgba(16, 132, 126, 0.10);
+                    &:hover{
+                        color: var(--aq-common-white);
+                        background-color: var(--aq-common-paste);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.med-discount{
+    &-style{
+        & .grc-discount-item {
+            & .aqf-banner-2{
+                &-content{
+                    & .aq-section{
+                        &-subtitle{
+                            font-size: 15px;
+                            font-weight: 400;
+                            text-transform: uppercase;
+                            color: var(--aq-common-black);
+                            font-family: var(--aq-ff-onest);
+                        }
+                        &-title{
+                            font-size: 24px;
+                            font-weight: 600;
+                            letter-spacing: 0;
+                            color: var(--aq-common-black);
+                            font-family: var(--aq-ff-onest);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.med-special{
+    &-item{
+        &:hover{
+            & .med-special-item-thumb{
+                & img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        &-thumb{
+            overflow: hidden;
+            border-radius: 12px;
+            & img{
+                border-radius: 12px;
+                transition: all .5s ease-in-out;
+            }
+        }
+        &-content{
+            left: 30px;
+            bottom: 30px;
+            position: absolute;
+        }
+        &-title{
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: -0.24px;
+            color: var(--aq-common-black);
+            font-family: var(--aq-ff-onest);
+        }
+    }
+}
+
+
+.med-brand{
+    &-wrapper{
+        border-radius: 12px;
+        border: 1px solid #EDEFF2;
+    }
+}
+
+
+.med-blog-style{
+    padding: 80px 100px;
+    border-radius: 20px;
+    & .aq-blog{
+        &-thumb{
+            border-radius: 20px;
+        }
+        &-title{
+            font-family: var(--aq-ff-onest);
+            & a{
+                &:hover{
+                    color: var(--aq-common-paste);
+                }
+            }
+        }
+        &-meta-date{
+            border-radius: 20px;
+        }
+    }
+}

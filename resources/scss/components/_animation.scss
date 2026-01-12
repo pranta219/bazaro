@@ -1,0 +1,69 @@
+@use '../utils' as *;
+/*----------------------------------------*/
+/*  2.3 Animations
+/*----------------------------------------*/
+
+@keyframes animate-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2), 0 0 0 0 rgba(255, 255, 255, 0.2);
+    }
+    40% {
+        box-shadow: 0 0 0 50px rgba(255, 109, 74, 0.0), 0 0 0 0 rgba(255, 255, 255, 0.2);
+    }
+    80% {
+        box-shadow: 0 0 0 50px rgba(255, 109, 74, 0.0), 0 0 0 30px rgba(255, 109, 74, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 109, 74, 0.0), 0 0 0 30px rgba(255, 109, 74, 0);
+    }
+}
+
+@keyframes headerSlideDown {
+    0% {
+     margin-top:-150px
+    }
+    100% {
+     margin-top:0
+    }
+}
+
+
+@keyframes slide-har {
+    0% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes aq-flash {
+    50%,
+    from,
+    to {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes shrink-anim {
+	from,
+	to {
+		transform: scale(1, 1);
+	}
+	25% {
+		transform: scale(0.7, 1.1);
+	}
+	50% {
+		transform: scale(1.1, 0.7);
+	}
+	75% {
+		transform: scale(0.95, 1.05);
+	}
+}

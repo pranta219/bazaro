@@ -1,0 +1,25 @@
+.aq-product-action-3 {
+    .aq-product-action-btn-3 {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        background-color: var(--aq-common-white, #fff);
+        border: 1px solid var(--aq-common-border, #eee);
+        border-radius: 50%;
+        color: var(--aq-common-black, #000);
+        font-size: 14px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: var(--aq-theme-primary, #000); // Or your primary color
+            color: #fff;
+            border-color: transparent;
+        }
+
+        i {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}

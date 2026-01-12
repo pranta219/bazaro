@@ -1,0 +1,171 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 cosmetics css
+/*----------------------------------------*/
+
+.csm-categories{
+    &-style{
+        & .aqf-categories-img {
+            height: 160px;
+            width: 160px;
+        }
+        & .aqf-categories-item span {
+            font-size: 18px;
+            text-transform: capitalize;
+            font-family: var(--aq-ff-satoshi-bold);
+            & i{
+                position: absolute;
+                top: -10px;
+                right: -15px;
+                font-size: 14px;
+                font-style: normal;
+            }
+        }
+    }
+}
+.csm-bundle{
+    &-style{
+        & .aqf-bundle-wrap{
+            height: 100%;
+            padding: 60px 65px;
+            border: 1px solid #F5F5F5;
+        } 
+        & .aq-cartmini-product-thumbnail {
+            width: 110px;
+            height: auto;
+            flex: 0 0 auto;
+            margin-right: 25px;
+        }
+        & .aq-cartmini-product-summary-wrap{
+            width: 100%;
+        }
+    }
+}
+.csm-banner{
+    &-style{
+        & .aqf-banner-2-content {
+            top: 0;
+            padding: 60px;
+            transform: translateY(0);
+        }
+        & .aq-section-subtitle {
+            text-transform: capitalize;
+        }
+    }
+}
+.csm-stories{
+    &-content{
+        &-wrap{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 12px;
+            padding: 4px;
+            border-radius: 218px;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+        }
+    }
+    &-thumb{
+        &-sm{
+            flex: 0 0 auto;
+            margin-right: 15px;
+            & img{
+                border-radius: 50%;
+            }
+        }
+    }
+    &-title{
+        font-size: 18px;
+        line-height: 1;
+        margin-bottom: 3px;
+        color: var(--aq-common-white);
+        font-family: var(--aq-ff-satoshi-bold);
+    }
+    &-content{
+        & span{
+            font-size: 15px;
+            line-height: 1;
+            color: var(--aq-common-white);
+            font-family: var(--aq-ff-satoshi-bold);
+        }
+    }
+}
+.csm-feature{
+    &-style{
+        & .aqf-shop-feature-item {
+            padding: 0;
+            border: 1px solid transparent;
+        }
+    }
+}
+.csm-product{
+    &-tab{
+        &-btn{
+            & ul{
+                border-bottom: 1px solid #DFE0E1;
+                & li{
+                    &:not(:last-child){
+                        & button{
+                            padding-right: 10px;
+                            margin-right: 10px;
+                            &::before{
+                                position: absolute;
+                                content: '';
+                                top: 8px;
+                                right: -3px;
+                                height: 4px;
+                                width: 4px;
+                                border-radius: 50%;
+                                background-color: #CED2D6;
+                            }
+                        }
+                    }
+                    &:first-child{
+                        & button{
+                            padding-left: 15px;
+                        }
+                    }
+                    &:last-child{
+                        & button{
+                            padding-right: 15px;
+                        }
+                    }
+                    & button{
+                        position: relative;
+                        font-size: 16px;
+                        line-height: 1;
+                        color: #A0A2A4;
+                        font-family: var(--aq-ff-satoshi-reglar);
+                        &::after{
+                            position: absolute;
+                            bottom: -7px;
+                            left: 0;
+                            content: '';
+                            height: 1px;
+                            width: 100%;
+                            width: 0;
+                            display: inline-block;
+                            transition: .3s ease-in-out;
+                            background-color: var(--aq-common-black);
+                        }
+                        &.active{
+                            color: var(--aq-common-black);
+                            &::after{
+                                width: 100%;
+                            }
+                            &.aq-tooltip-top .aq-tooltip-item {
+                                visibility: visible;
+                                opacity: 1;
+                                transform: translateY(-6px) translateX(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

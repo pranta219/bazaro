@@ -1,0 +1,120 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 feature css
+/*----------------------------------------*/
+.aqf-shop{
+    &-feature{
+        &-ptb{
+            @media #{$xl,$lg,$md,$xs}{
+                padding-bottom: 40px;
+            }
+        }
+        &-item{
+            padding: 30px 40px;
+            border: 1px solid var(--aq-gray-3);
+            & span{
+                margin-bottom: 25px;
+                display: inline-block;
+                color: var(--aq-common-coffee);
+            }
+            & h4{
+                font-size: 20px;
+                line-height: 1;
+                margin-bottom: 10px;
+                letter-spacing: 0.2px;
+                color: var(--aq-common-black);
+                font-family: var(--aq-ff-satoshi-bold);
+                @media #{$xl}{
+                    font-size: 15px;
+                    margin-bottom: 8px;
+                }
+            }
+            & p{
+                font-size: 16px;
+                line-height: 133.663%;
+            }
+        }
+        &-style{
+            & .aqf-shop-feature-item {
+                padding: 0;
+                border: 0;
+                @media #{$lg}{
+                    margin-right: 40px;
+                }
+                @media #{$md,$xs}{
+                    margin-right: 30px;
+                }
+                & span{
+                    color: var(--aq-common-black);
+                }
+            }
+            & .aqf-shop-feature-item p {
+                font-size: 15px;
+                margin-bottom: 0;
+                @media #{$xl}{
+                    font-size: 13px;
+                }
+            }
+            & .aqf-shop-feature-wrap{
+                padding: 40px 40px;
+                padding-bottom: 10px;
+                @media #{$xl}{
+                    padding: 40px 24px;
+                    padding-bottom: 10px;
+                }
+            }
+            &.bdr-radius{
+                & .aqf-shop-feature-wrap{
+                    border-radius: 20px;
+                }
+            }
+        }
+        &-icon{
+            height: 60px;
+            width: 60px;
+            margin-right: 16px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            flex: 0 0 auto;
+            color: var(--aq-common-black);
+            background-color: var(--aq-common-white);
+            @media #{$xl}{
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+.aqf-feature{
+    &-3{
+        &-style{
+            & .aqf-shop-feature-wrap{
+                padding: 40px 40px;
+                padding-bottom: 10px;
+                border: 1px solid var(--aq-gray-3);
+                & .aqf-shop-feature-item{
+                    &:not(:last-child){
+                        border-right: 1px solid var(--aq-gray-3);
+                        padding-right: 30px;
+                    }
+                }
+            }
+            & .aqf-shop-feature-item {
+                padding: 0;
+                border: 0;
+                & p{
+                    margin-bottom: 0;
+                }
+            }
+            & .aqf-shop-feature-item span {
+                margin-bottom: 0;
+                margin-right: 15px;
+                color: var(--aq-common-black);
+            }
+        }
+    }
+}

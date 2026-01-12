@@ -1,0 +1,5 @@
+sass --watch "E:\Dropbox\Farhan Firoz\ekomart\assets\scss\main.scss":"E:\Dropbox\Farhan Firoz\ekomart\assets\css\main.css
+
+
+// pranta sass
+sass --watch C:\Users\theme\Dropbox\pranto\HTML\ekomart\assets\scss\main.scss:C:\Users\theme\Dropbox\pranto\HTML\ekomart\assets\css\main.css

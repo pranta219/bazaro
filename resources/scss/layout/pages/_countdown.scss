@@ -1,0 +1,67 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 countdown css
+/*----------------------------------------*/
+.aq-countdown{
+    &-style{
+        width: 188px;
+        font-size: 14px;
+        padding: 5px 18px;
+        padding-top: 9px;
+        padding-right: 0;
+        border-radius: 30px;
+        color: var(--aq-common-white);
+        background-color: var(--aq-common-black);
+        & .count-box{
+            & span,
+            & i {
+                font-size: 20px;
+                line-height: 1;
+                display: inline-block;
+                letter-spacing: 0.14px;
+                color: var(--aq-common-white);
+                font-family: var(--aq-ff-satoshi-medium);
+            }
+            & i{
+                margin: 0 5px;
+                font-style: normal;
+                display: inline-block;
+                transform: translateY(-3px);
+            }
+        }
+        &-2{
+            & .count-box{
+                & span{
+                    height: 36px;
+                    width: 36px;
+                    font-size: 14px;
+                    line-height: 36px;
+                    border-radius: 50%;
+                    text-align: center;
+                    display: inline-block;
+                    letter-spacing: 0.14px;
+                    color: var(--aq-common-white);
+                    background-color: var(--aq-common-black);
+                    font-family: var(--aq-ff-satoshi-bold);
+                }
+                & i{
+                    margin: 0 5px;
+                    font-size: 18px;
+                    font-style: normal;
+                    display: inline-block;
+                    color: var(--aq-common-black);
+                }
+            }
+        }
+    }
+    &-text{
+        & span{
+            color: #414243;
+            font-size: 16px;
+            line-height: 14px;
+            letter-spacing: 0.16px;
+            font-family: var(--aq-ff-satoshi-medium);
+        }
+    }
+}

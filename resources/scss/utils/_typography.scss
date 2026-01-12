@@ -1,0 +1,68 @@
+// font url
+$font-url: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Poetsen+One&family=Satisfy&display=swap';
+
+
+// Custom Fonts Start here //
+
+@font-face {
+    font-family: 'Satoshi-Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Satoshi-Light'), url('/assets/fonts/Satoshi-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Satoshi-Regular';
+    src: url('/assets/fonts/Satoshi-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Satoshi-Regular.woff') format('woff'),
+        url('/assets/fonts/Satoshi-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-Medium';
+    src: url('/assets/fonts/Satoshi-Medium.woff2') format('woff2'),
+        url('/assets/fonts/Satoshi-Medium.woff') format('woff'),
+        url('/assets/fonts/Satoshi-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('/assets/fonts/Satoshi-Bold.woff2') format('woff2'),
+        url('/assets/fonts/Satoshi-Bold.woff') format('woff'),
+        url('/assets/fonts/Satoshi-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+
+// font family
+$font-family: (
+    'ff': ('body': "'Satoshi-Medium', sans-serif",
+        'heading': "'Satoshi-Regular', sans-serif",
+        'p': "'Satoshi-Medium', sans-serif",
+        'onest': "'Onest', sans-serif",
+        'satisfy': "'Satisfy', cursive",
+        'poetsenone': "'Poetsen One', sans-serif",
+        'libre': "'Libre Caslon Text', sans-serif",
+        'satoshi-light': "'Satoshi-Light', sans-serif",
+        'satoshi-regular': "'Satoshi-Regular', sans-serif",
+        'satoshi-medium': "'Satoshi-Medium', sans-serif",
+        'satoshi-bold': "'Satoshi-Bold', sans-serif",
+        'fontawesome': '"Font Awesome 6 Pro"',
+    )
+);
+
+// font size
+$font-size: (
+    'fz': ('body': 14px,
+        'p': 16px,
+    )
+);

@@ -1,0 +1,20 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  4.3 offcanvas scss
+/*----------------------------------------*/
+.body-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999978;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.45s ease-in-out;
+    background: rgba($color: #000000, $alpha: 0.6);
+    &.opened {
+        opacity: 1;
+        visibility: visible;
+    }
+}

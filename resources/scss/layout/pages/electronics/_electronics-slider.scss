@@ -1,0 +1,134 @@
+@use '../../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 electronics slider css
+/*----------------------------------------*/
+.elt-slider{
+    &-item{
+        overflow: hidden;
+        border-radius: 20px;
+        min-height: 650px;
+    }
+    &-thumb{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &-price{
+        display: block;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 14px;
+        color: var(--aq-common-black);
+        font-family: var(--aq-ff-onest);
+    }
+    &-active{
+        margin: 0 -540px;
+        & .swiper-slide-active {
+            & .elt-slider-content {
+                & .aq-section-subtitle,
+                & .aq-section-title,
+                & .elt-slider-price,
+                & .aq-btn-black {
+                    animation-name: fadeInUp;
+                    animation-fill-mode: both;
+                } 
+            }
+        }
+        & .swiper-slide-prev,
+        & .swiper-slide-next{
+            & .elt-slider-content{
+                & .aq-section-subtitle,
+                & .aq-section-title,
+                & .elt-slider-price,
+                & .aq-btn-black {
+                    display: none;
+                } 
+            }
+        }
+    }
+    &-video{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        & video{
+            height: 100%;
+        }
+    }
+    &-content{
+        & .aq-section-subtitle{
+            animation-delay: 0.3s;
+            animation-duration: 1s;
+        }
+        & .aq-section-title{
+            animation-delay: 0.5s;
+            animation-duration: 1s;
+        }
+        & .elt-slider-price{
+            animation-delay: 0.7s;
+            animation-duration: 1s;
+        }
+        & .aq-btn-black{
+            animation-delay: 0.9s;
+            animation-duration: 1s;
+        }
+    }
+    &-arrow{
+        bottom: 5%;
+        right: 13%;
+        z-index: 2;
+        position: absolute;
+        & button{
+            height: 46px;
+            width: 46px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid rgba(0, 7, 9, 0.08);
+            &:hover{
+                color: var(--aq-common-white);
+                border-color: var(--aq-common-black);
+                background-color: var(--aq-common-black);
+            }
+            &.aq-slider-prev{
+                & svg{
+                    transform: translate(0px, -1px);
+                }
+            }
+            &.aq-slider-next{
+                & svg{
+                    transform: translate(0px, -1px);
+                }
+            }
+        }
+        &.grc-slider-arrow{
+            position: static;
+            opacity: 0;
+            visibility: hidden;
+            @include aq-transition();
+            & button{
+                position: absolute;
+                top: 50%;
+                left: 40px;
+                z-index: 2;
+                border-color: transparent;
+                background: var(--aq-common-white);
+                box-shadow: 0 1px 2px 0 rgba(20, 20, 20, 0.10);
+                &:hover{
+                    background-color: var(--aq-common-green);
+                }
+                &.aqf-slider-next{
+                    left: auto;
+                    right: 40px;
+                }
+            }
+        }
+    }
+}

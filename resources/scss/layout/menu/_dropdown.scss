@@ -1,0 +1,39 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  4.1 dropdown scss
+/*----------------------------------------*/
+.aq-header-dropdown{
+    & nav{
+        & ul{
+            & li{
+                &.has-dropdown{
+                    & a{
+                        &::after {
+                            content: "";
+                            height: 8px;
+                            width: 8px;
+                            margin-left: 6px;
+                            display: inline-block;
+                            -webkit-transform: rotate(45deg) translateY(-5px);
+                            -ms-transform: rotate(45deg) translateY(-5px);
+                            transform: rotate(45deg) translateY(-5px);
+                            -webkit-transition: all 0.15s ease-in-out;
+                            transition: all 0.15s ease-in-out;
+                            border-bottom: 1px solid currentColor;
+                            border-right: 1px solid currentColor;
+                        }
+                    }
+                }
+                &:hover {
+                    &.has-dropdown {
+                        & a{
+                            &::after {
+                                transform: rotate(-135deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

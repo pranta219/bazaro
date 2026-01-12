@@ -1,0 +1,324 @@
+@use '../../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 fashion slider css
+/*----------------------------------------*/
+.aqf-slider{
+    &-thumb{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @media #{$xs}{
+            position: static;
+        }
+        @media #{$sm}{
+            position: absolute;
+        }
+        & img{
+            margin-right: -100px;
+            height: 100%;
+            object-fit: cover; 
+            @media #{$xl}{
+                margin-right: 0;
+            }
+            @media #{$xs}{
+                margin-right: 0;
+                height: auto;
+                object-fit: inherit;
+            }
+            @media #{$sm}{
+                margin-right: 0;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &-content{
+        padding-top: 200px;
+        padding-bottom: 200px;
+        @media #{$xl,$lg}{
+            padding-top: 110px;
+            padding-bottom: 110px;
+        }
+        @media #{$md}{
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+        @media #{$xs}{
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
+        @media #{$sm}{
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        & .aq-section-subtitle{
+            animation-delay: 0.3s;
+            animation-duration: 1s;
+            display: inline-block;
+        }
+        & .aq-section-title{
+            animation-delay: 0.5s;
+            animation-duration: 1s;
+        }
+        & .elt-slider-price{
+            animation-delay: 0.6s;
+            animation-duration: 1s;
+        }
+        & .aq-btn-black,
+        & .aq-btn-link,
+        & .aq-btn-white{
+            animation-delay: 0.7s;
+            animation-duration: 1s;
+        }
+    }
+    &-active{
+        & .cy-slider-info-wrap{
+            animation-delay: 0.9s;
+            animation-duration: 1s;
+        }
+        & .swiper-slide-active {
+            & .aqf-slider-content {
+                & .aq-section-subtitle,
+                & .aq-section-title,
+                & .aq-btn-black,
+                & .elt-slider-price,
+                & .aq-btn-link,
+                & .aq-btn-white {
+                    animation-name: fadeInUp;
+                    animation-fill-mode: both;
+                } 
+            }
+            & .grc-hero-content{
+                & .grc-hero-subtitle,
+                & .grc-hero-title,
+                & .grc-hero-text,
+                & .grc-hero-btn{
+                    animation-name: fadeInUp;
+                    animation-fill-mode: both;
+                }
+            }
+            & .grc-hero-thumb-wrap{
+                animation-name: fadeInUp;
+                animation-fill-mode: both;
+            }
+            & .med-hero-content{
+                & .med-hero-subtitle,
+                & .med-hero-title,
+                & .med-hero-text,
+                & .med-hero-btn{
+                    animation-name: fadeInUp;
+                    animation-fill-mode: both;
+                }
+            }
+            & .med-hero-thumb-wrap{
+                animation-name: fadeInUp;
+                animation-fill-mode: both;
+            }
+            & .grc-hero-shapes{
+                & .shape{
+                    &-1{
+                        & img{
+                            transform: translateY(0px);
+                        }
+                    }
+                    &-2{
+                        & img{
+                            transform: translateY(0px);
+                        }
+                    }
+                    &-3,
+                    &-4{
+                        animation-name: fadeInUp;
+                        animation-fill-mode: both;
+                    }
+                    &-5{
+                        & img{
+                            transform: translateX(0px);
+                        }
+                    }
+                    &-6{
+                        & img{
+                            transform: translateY(0px);
+                        }
+                    }
+                }
+            }
+            & .cy-slider-info-wrap {
+                & img{
+                    animation-name: fadeInUp;
+                    animation-fill-mode: both;
+                }
+            } 
+        }
+    }
+    &-dot{
+        position: absolute;
+        top: 50%;
+        right: 50px;
+        z-index: 1;
+        z-index: 22;
+        display: inline-flex;
+        left: auto !important;
+        width: auto !important;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateY(-50%);
+        & .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            opacity: 1;
+            transition: .3s;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 9px 0 !important;
+            border: 1px solid transparent;
+            background: var(--aq-common-black);
+            @media #{$md,$xs}{
+                margin: 4px 0 !important;
+            }
+            &.swiper-pagination-bullet-active {
+                opacity: 1;
+                background: transparent;
+                transform: scale(1.3);
+                border-color: var(--aq-common-black);
+            }
+        }
+    }
+}
+
+.aqf-arrow{
+    &-border{
+        height: 25px;
+        width: 2px;
+        margin: 0 25px;
+        display: inline-block;
+        transform: translateY(1px);
+        background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+}
+
+.aqf-summer{
+    &-slider{
+        @media #{$lg,$md,$xs}{
+            margin-bottom: 25px;
+        }
+        &-content{
+            @media #{$lg,$md,$xs}{
+                margin-bottom: 30px;
+            }
+            & p{
+                font-size: 24px;
+                line-height: 34px;
+                padding-bottom: 22px;
+                letter-spacing: -0.24px;
+                color: var(--aq-common-black);
+                font-family: var(--aq-ff-satoshi-regular);
+                @media #{$lg,$md,$xs}{
+                    padding-bottom: 0;
+                }
+            }
+        }
+        &-arrow{
+            & button{
+                color: var(--aq-common-black);
+                &:hover{
+                    color: var(--aq-common-coffee);
+                }
+            }
+        }
+        &-wrap{
+            @media #{$lg,$md,$xs}{
+                padding-left: 0;
+            }
+        }
+    }
+    &-title{
+        &-wrap{
+            @media #{$lg,$md,$xs}{
+                padding-top: 30px;
+                & .aq-section-title.fs-60{
+                    font-size: 30px;
+                    margin-bottom: 15px;
+                    & br{
+                        display: none;
+                    }
+                }
+            } 
+        }
+    }
+    &-active{
+        margin-left: 20px;
+        @media #{$lg,$md,$xs}{
+            margin-left: 0;
+        }
+    }
+    &-suit{
+        &-area{
+            @media #{$xl}{
+                padding-bottom: 90px;
+            }
+            @media #{$lg,$lg,$md,$xs}{
+                padding-bottom: 80px;
+            }
+        }
+        &-img{
+            height: 100%;
+            & img{
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &-wrap{
+        @media #{$md,$xs}{
+            padding: 0 30px;
+        }
+    }
+}
+
+.cy-slider {
+    &-info{
+        &-subtitle{
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 1;
+            margin-bottom: 10px;
+            display: inline-block;
+            font-family: var(--aq-ff-onest);
+            color: rgba(255, 255, 255, 0.50);
+        }
+        &-title{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 5px;
+            color: var(--aq-common-white);
+            font-family: var(--aq-ff-onest);
+        }
+        &-wrap{
+            & .cy-slider-info-item{
+                &:not(:last-child){
+                    margin-right: 30px;
+                }
+            }
+        }
+        &-item{
+            padding-left: 16px;
+            border-left: 1px solid rgba($color: #fff, $alpha: 0.1);
+        }
+    }
+    &-content{
+        padding-top: 175px;
+        padding-bottom: 185px;
+    }
+}
+
+.csm-slider{
+    &-content{
+        padding-top: 350px ;
+        padding-bottom: 290px ;
+    }
+}

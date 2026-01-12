@@ -1,0 +1,48 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.5 Background
+/*----------------------------------------*/
+.grey-bg {
+	background-color: var(--aq-grey-1);
+}
+.theme-bg{
+	background-color: var(--aq-theme-1);
+}
+.white-bg {
+	background-color: var(--aq-common-white);
+}
+.black-bg{
+	background-color: var(--aq-dark-black);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[data-bg-color = "footer-bg-grey"] {
+	background-color: var(--aq-footer-grey-1);
+}
+[data-bg-color = "footer-bg-white"] {
+	background-color : var(--aq-common-px-white);
+}

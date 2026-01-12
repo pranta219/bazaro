@@ -1,0 +1,63 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 countdown css
+/*----------------------------------------*/
+.aqf-text{
+    &-slide{
+        &-item{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            @media #{$md,$xs}{
+                gap: 20px;
+            }
+            & p{
+                font-size: 15px;
+                line-height: 14px;
+                margin-bottom: 0;
+                letter-spacing: 0.15px;
+                white-space: nowrap;
+                color: var(--aq-common-black);
+                font-family: var(--aq-ff-satoshi-medium);
+            }
+            & span{
+                margin-right: 45px;
+                display: inline-block;
+                color: var(--aq-common-black);
+                @media #{$md,$xs}{
+                    margin-right: 20px;
+                }
+            }
+        }
+        &-wrap{
+            display: flex;
+            -webkit-animation: slide-har 18s linear infinite;
+            animation: slide-har 18s linear infinite;
+            transition: animation-duration 300ms;
+            &:hover{
+                animation-play-state: paused;
+            }
+        }
+        &-bdr{
+            border-bottom: 1px solid #F2F2F2;
+            @media #{$xs}{
+                border-top: 1px solid #F2F2F2;
+            }
+        }
+        &-3{
+            &-style{
+                border: 1px solid rgba(20, 20, 20, 0.06);
+                & .aqf-text-slide-item {
+                    flex: 0 0 auto;
+                    & p {
+                        font-size: 50px;
+                        line-height: 133.663%;
+                        color: var(--aq-common-black);
+                        font-family: var(--aq-ff-satoshi-medium);
+                    }
+                }
+            }
+        }
+    }
+}

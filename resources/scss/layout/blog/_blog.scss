@@ -1,0 +1,105 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  5.4 Blog css
+/*----------------------------------------*/
+
+.aq-blog{
+    &-meta{
+        &-date{
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 9px;
+            padding: 12px 16px;
+            border-radius: 30px;
+            display: inline-block;
+            color: var(--aq-common-black);
+            background-color: var(--aq-common-white);
+        }
+        &-cat{
+            & > span{
+                color: #55585B;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 10px;
+                font-family: var(--aq-ff-onest);
+                &:not(:last-child){
+                    margin-right: 4px;
+                }
+            }
+            & i{
+                margin-right: 10px;
+                color: var(--aq-common-black);
+                & svg{
+                    transform: translateY(-1px);
+                }
+            }
+        }
+    }
+    &-title{
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.1; 
+        color: var(--aq-common-black);
+        font-family: var(--aq-ff-onest);
+        &.fs-30{
+            font-size: 30px;
+        }
+        & a{
+            &:hover{
+                color: var(--aq-common-red);
+            }
+        }
+    }
+    &-content{
+        padding: 25px 20px;
+    }
+    &-thumb{
+        overflow: hidden;
+        border-radius: 20px;
+        & img{
+            width: 100%;
+            transition: .9s;
+        }
+    }
+    &-item{
+        &:hover{
+            & .aq-blog-thumb{
+                & img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    &-3{
+        &-style{
+            & .aq-blog-thumb {
+                overflow: hidden;
+                border-radius: 0;
+            }
+            & .aq-blog-meta-date {
+                border-radius: 0px;
+            }
+        }
+    }
+}
+
+.csm-blog{
+    &-style{
+        & .aq-blog-thumb {
+            border-radius: 0;
+        }
+        & .aq-blog-meta-date {
+            border-radius: 0;
+        }
+        & .aq-blog-title {
+            line-height: 1.2;
+            font-family: var(--aq-ff-satoshi-medium);
+        }
+        & .aq-blog-meta-cat > span {
+            font-family: var(--aq-ff-satoshi-medium);
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@use '../../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.2 bags hero slider css
+/*----------------------------------------*/
+.aqb-collection{
+    &-right{
+        padding-right: 60px;
+        padding-left: 30px;
+    }
+    &-thumb{
+        padding-right: 30px;
+        position: sticky;
+        top: 70px;
+    }
+}
+
+.aqb-explore{
+    &-content{
+        & p{
+            margin-bottom: 30px;
+            color: var(--aq-common-black);
+        }
+    }
+}
