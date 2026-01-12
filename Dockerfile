@@ -31,18 +31,19 @@ WORKDIR /var/www/html
 # 6. Copy Project Files
 COPY . /var/www/html/
 
-# 7. Install PHP Dependencies (without dev)
+# 7. Install PHP Dependencies
 RUN composer install --no-interaction --optimize-autoloader --no-dev || true
 
 # 8. Ensure Storage & Cache Directories Exist with Correct Permissions
-RUN mkdir -p /var/www/html/storage/framework/sessions \
-    && mkdir -p /var/www/html/storage/framework/views \
-    && mkdir -p /var/www/html/storage/framework/cache \
-    && mkdir -p /var/www/html/bootstrap/cache \
-    && chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
-    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+RUN mkdir -p storage/framework/sessions \
+    && mkdir -p storage/framework/views \
+    && mkdir -p storage/framework/cache \
+    && mkdir -p bootstrap/cache \
+    && chown -R www-data:www-data storage bootstrap/cache \
+    && chmod -R 775 storage bootstrap/cache
 
-# 9. Expose Port
-EXPOSE 80
-
-CMD ["apache2-foreground"]
+# 9. Final Setup for Railway Port Binding
+# This dynamically changes the Apache port at runtime to match what Railway provides
+CMD sed -i "s/Listen 80/Listen ${PORT:-80}/g" /etc/apache2/ports.conf && \
+    sed -i "s/:80/:${PORT:-80}/g" /etc/apache2/sites-available/000-default.conf && \
+    apache2-foreground
